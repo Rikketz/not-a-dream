@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+
+import React, { useState } from 'react';
 import './App.css';
+import Inventory from './Components/Inventory/Inventory';
+import Menu from './Components/Menu/Menu';
+import Scene from './Components/Scene/Scene';
+export const Contexto = React.createContext();
 
 function App() {
+  const [currentCursor, setCurrentCursor] = useState("normal");
   return (
+    
+    <Contexto.Provider 
+      value={{
+        currentCursor,
+        setCurrentCursor,
+      }}>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div className='viewport'>
+        <div className='viewport-container'>
+          <Scene/>
+          <div className='viewport__rightContainer'>
+            <Menu/>
+            <Inventory/>
+          </div>
+        </div>
+      </div>
+
       </header>
     </div>
+    </Contexto.Provider>
   );
 }
 

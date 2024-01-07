@@ -1,0 +1,23 @@
+.crematorium_background{
+    background-image: url("../../../public/assets/backgrounds/fondo1.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    &__tableTest{
+        position: relative;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        filter: brightness(30%);
+        cursor: pointer;
+    }
+}
+
+
+.textBox{
+    font-size: 100px;
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
