@@ -8,9 +8,7 @@
     height: 30%;
     position: relative;
     bottom: -17%;
-    background-image: url("../../public/assets/pictures/textbox.PNG");
-    background-size: contain;
-    z-index: 50;
+    z-index: 300;
 
     &__texto{
         color: white;
@@ -18,5 +16,9 @@
         text-align: start;
         padding-left: 5%;
         padding-top: 4%;
+    }
+
+    &__textbox{
+        width: 85%;
     }
 }
