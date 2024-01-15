@@ -4,6 +4,9 @@ export default function ReceptionE(){
 
 
     return <>
+    <div className="receptionE_background">
+        
+    </div>
 
     </>
 }

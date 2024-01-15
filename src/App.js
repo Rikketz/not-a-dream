@@ -8,12 +8,21 @@ export const Contexto = React.createContext();
 
 function App() {
   const [currentCursor, setCurrentCursor] = useState("normal");
+  const [inventoryItems, setInventoryItems] = useState([]);
+
+  const addToInventory = (item) => {
+    console.log(inventoryItems)
+    setInventoryItems((prevItems) => [...prevItems, item]);
+  };
+
   return (
     
     <Contexto.Provider 
       value={{
         currentCursor,
         setCurrentCursor,
+        addToInventory,
+        inventoryItems,
       }}>
     <div className="App">
       <header className="App-header">
@@ -22,7 +31,7 @@ function App() {
           <Scene/>
           <div className='viewport__rightContainer'>
             <Menu/>
-            <Inventory/>
+            <Inventory inventoryItems={inventoryItems}/>
           </div>
         </div>
       </div>

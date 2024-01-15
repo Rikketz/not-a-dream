@@ -4,7 +4,7 @@ import "./Scene.scss"
 import {Contexto} from "../../App"
 
 export default function Scene(){
-    const {currentCursor} = useContext(Contexto);
+    const {currentCursor, addToInventory} = useContext(Contexto);
 
     
 
@@ -14,7 +14,7 @@ export default function Scene(){
     return <>
         <div className={`scene ${currentCursor==="look" ? 'cursorMirar' : currentCursor==="touch" ? 'cursorTocar' : 'cursorNormal'}`}>
         
-            <Crematorium/>
+            <Crematorium addToInventory={addToInventory}/>
         </div>
     </>
 }
