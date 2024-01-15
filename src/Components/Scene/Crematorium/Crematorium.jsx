@@ -13,6 +13,7 @@ export default function Crematorium(){
     const tableInteraction = function(){
         console.log('funciono bien');
         setTextBox(!textBox);
+        console.log(textBox);
     }
 
     const nextmessage = function(){

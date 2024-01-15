@@ -1,6 +1,10 @@
-.animate__animated.animate__fadeInUpBig {
-    animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s;
+.animate__animated.animate__fadeInUp {
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+}
+.animate__animated.animate__fadeOutDown {
+    animation: fadeOutDown; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
 }
 
 .textbox{
