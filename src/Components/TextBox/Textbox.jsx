@@ -5,7 +5,7 @@ import "./Textbox.scss"
 import "animate.css"
 import Messages from "./Messages/Messages";
 
-export default function TextBox({mensaje}){
+export default function TextBox({speaker ,mensaje}){
     const [hideMessageBox, setHideMessageBox] = useState(false);
 
     function exitMessageBox(){
@@ -19,15 +19,14 @@ export default function TextBox({mensaje}){
 
     return <>
     {!hideMessageBox && 
-        <div className="textbox animate__animated animate__fadeInUp">
-            <img 
+        <div onClick={exitMessageBox} className="textbox animate__animated animate__fadeInUp">
+            {/* <img 
                 onClick={exitMessageBox} 
                 className="textbox__textbox" 
                 src={textbox} 
                 alt="textbox" 
-            />
-            <Messages name={"Player"} message={"Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."} />
-            <p className="textbox__texto">{mensaje}</p>
+            /> */}
+            <Messages name={speaker} message={mensaje} />
     </div>}
         {hideMessageBox && null}
     </>

@@ -23,8 +23,6 @@ export default function Crematorium(){
         } else if (numMensaje === 1){
             message = "test 2"
         }
-        
-        
     }
 
     return <>
