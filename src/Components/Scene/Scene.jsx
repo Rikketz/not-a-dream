@@ -14,7 +14,7 @@ export default function Scene(){
     return <>
         <div className={`scene ${currentCursor==="look" ? 'cursorMirar' : currentCursor==="touch" ? 'cursorTocar' : 'cursorNormal'}`}>
         
-            //<Crematorium addToInventory={addToInventory}/>
+            {/* <Crematorium addToInventory={addToInventory}/> */}
             
             <ReceptionN/>
 
