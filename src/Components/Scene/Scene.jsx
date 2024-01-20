@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import Crematorium from "./Crematorium/Crematorium"
 import "./Scene.scss"
 import {Contexto} from "../../App"
+import ReceptionN from "./Reception/ReceptionN/ReceptionN";
 
 export default function Scene(){
     const {currentCursor, addToInventory} = useContext(Contexto);
@@ -14,7 +14,10 @@ export default function Scene(){
     return <>
         <div className={`scene ${currentCursor==="look" ? 'cursorMirar' : currentCursor==="touch" ? 'cursorTocar' : 'cursorNormal'}`}>
         
-            <Crematorium addToInventory={addToInventory}/>
+            //<Crematorium addToInventory={addToInventory}/>
+            
+            <ReceptionN/>
+
         </div>
     </>
 }
